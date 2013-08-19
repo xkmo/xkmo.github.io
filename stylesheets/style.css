@@ -1,3 +1,13 @@
+#product-name {
+	margin-bottom: 5px;
+}
+
+#price {
+	display: inline-block;
+	vertical-align: 16px;
+	margin-left: 10px;
+}
+
 h3 [class^="icon-"], [class*=" icon-"] {
 	margin-right: 10px;
 }
