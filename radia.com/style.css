@@ -1,0 +1,33 @@
+BODY  { 
+  background-color:white; 
+  color: black 
+  text-align:left;
+  white-space:pre;
+font-family : "andale mono", "monotype.com", monaco, "courier new", courier, monospace; 
+/*font-family : helvetica;*/
+
+}
+
+div.outer {
+  width: 100%;
+  text-align: center;
+}
+div.inner {
+
+  text-align:left;
+  white-space:pre;
+  display: inline-block;
+}
+
+div.inner_list {
+
+  text-align:center;
+  white-space:pre;
+  display: inline-block;
+}
+
+a.pageUp {
+  display:block;
+  text-align:center;
+}
+

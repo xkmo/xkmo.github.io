@@ -1,0 +1,68 @@
+body {
+	font: 12px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+#wrapper {
+	width: 720px;
+	margin: 0 auto;
+}
+
+#product {
+/*	text-align: center;*/
+	overflow: hidden;
+	width: 100%;
+	height: 60px;
+	padding: 20px 0;
+}
+#product .logo {
+	float: left;
+}
+#product .logo img {
+	width: 80px;
+	height: 80px;
+	margin-top: -14px;
+}
+#product .title {
+	width: 110px;
+	float: left;
+	margin-left: 15px;
+/*	margin: 0 auto;*/
+}
+#product .title .name {
+	font: bold 40px/1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+#product .title .tagline {
+	font: 12px/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+#product .app-store {
+	float: right;
+}
+
+#showcase {
+	width: 100%;
+	height: 400px;
+	border-radius: 5px;
+	background: transparent url('../images/showcase-background.png') no-repeat left top;
+	box-shadow: 0px 3px 5px #999;
+}
+
+#showcase .player {
+	width: 262px;
+	margin: 0 auto;
+	padding-top: 17px;
+}
+
+#copyright {
+	margin-top: 20px;
+	padding-top: 9px;
+	border-top: 1px solid #EEE;
+	color: #666;
+}
+#copyright a {
+	float: right;
+	color: #08c;
+	text-decoration: none;
+}
+#copyright a:hover {
+	text-decoration: underline;
+}
