@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>关于我们</title>
+
+<style type="text/css">
+.slide{
+    position: absolute;
+  }
+  #gallery{
+    position: relative;
+    width: 460px;
+    height: 568px;
+    margin: 20px auto 20px auto;
+    float: left;
+
+  }
+  #slide0{
+    width: 213px;
+    height: 378px;
+    top: 95px;
+    left: 16px;
+    z-index: 1;
+  }
+  #slide1{
+    width: 266px;
+    height: 473px;
+    top: 47px;
+    left: 40px;
+    z-index: 2;
+  }
+  #slide2{
+    width: 320px;
+    height: 568px;
+    top: 0px;
+    left: 70px;
+    z-index: 3;
+  }
+  #slide3{
+    width: 266px;
+    height: 473px;
+    top: 47px;
+    right: 40px;
+    z-index: 2;
+  }
+  #slide4{
+    width: 213px;
+    height: 378px;
+    top: 95px;
+    right: 16px;
+    z-index: 1;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hidden{
+    display: none;
+  }
+
+  #head{
+    margin: 20px auto;
+    width: 100%;
+
+  }
+
+  #content{
+    display: inline-block;
+    width: 100%;
+    background: url("background.png");
+    margin-top: 0px;
+    border-radius: 5px;
+  }
+
+  #wrapper{
+    margin: 0px auto;
+    width: 720px;
+    
+  }
+
+  .logo, .name{
+    float: left;
+  }
+
+  .name{
+    font: bold 56px/1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  #head a.logo img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+  }
+
+  #head a.appstore{
+    width: 240px;
+    height: 80px;
+    float: right;
+  }
+
+
+  #download-qr{
+    float: right;
+    display: block;
+    color: white;
+
+  }
+
+  img.qrclass{
+    width: 180px;
+    height: 180px;
+    margin-top: 20px;
+    margin-right: 45px;
+    padding-left: 20px;
+    
+  }
+
+  #download-qr div{
+    margin: 40px auto;
+    font-size: 30px;
+
+    
+  
+  }
+
+  #download-qr a{
+    width: 180px;
+    height: 60px;
+    margin: 50px 20px;
+    display: block;
+
+  }
+  #download-qr a img{
+    display: block;
+    width: 180px;
+    height: 60px;
+  }
+
+  #copyright{
+    margin-top: 20px;
+padding-top: 9px;
+border-top: 1px solid #EEE;
+color: #666;
+    margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  width: 720px;
+  margin: 0px auto;
+  display: block;
+
+  }
+
+  #copyright a{
+  float: right;
+  color: #08c;
+  text-decoration: none;
+  margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+
+  }
+
+</style>
+
+
+<script src="javascript/jquery-1.5.2.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    
+    var i = 1;
+    var w, h, t, l, zI;
+    // window.onload = function() {
+    //   $("#head a.appstore").hover(
+    //       function(){
+    //         $("#head a.appstore img").attr('src','download-appstore-hover.png');
+    //         console.log("hover");
+    //       },
+    //       function(){
+    //         $("#head a.appstore img").attr('src','download-appstore.png');
+    //         console.log("leave");
+    //       }
+    //     );
+    // };
+    function run() {
+      for(var k=0; k<5; k++){ 
+        if(k<5){
+          var num = (i+k)%5;
+          switch(k) {
+            case 0:
+              w = "213px"; h = "378px"; t = "95px"; l = "16px"; zI=1;
+              break;
+            case 1:
+              w = "266px"; h = "473px"; t = "47px"; l = "40px"; zI=2;
+              break;
+            case 2:
+              w = "320px"; h = "568px"; t = "0px"; l = "70px"; zI=3;
+              break;
+            case 3:
+               w = "266px"; h = "473px"; t = "47px"; l = "154px"; zI=2;
+              break;
+            case 4:
+              w = "213px"; h = "378px"; t = "95px"; l = "231px"; zI=1;
+              break;
+          }
+          $("#slide"+num).css("z-index", zI).animate({width: w, height: h, top: t, left: l}, {duration: 'fast'}, {queue: false});
+        }else{
+          var num = (i+k)%5;
+          $("#slide"+num).css({"z-index": 0, width: "309px", height: "123px", top: "61px", left: "331px"});
+        }
+      }
+      
+      i++;
+    }
+    window.setInterval("run()", 4000);
+    
+  
+</script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="head">
+      <a href="/" class="logo">
+        <img src="icon-40@2x.png" alt="XCoin">
+      </a>
+      <h2 class="name">XCoin</h2>
+      <a href="itms-services://?action=download-manifest&url=http://mojun.github.io/app/ios/BTCStats.plist" class="appstore">
+        <img src="download-appstore.png">
+      </a>
+    </div>
+    <div id="content">
+      <div id="gallery">
+        <div class="slide" id="slide0"><img src="0.png" /></div>
+        <div class="slide" id="slide1"><img src="1.png" /></div>
+        <div class="slide" id="slide2"><img src="2.png" /></div>
+        <div class="slide" id="slide3"><img src="3.png" /></div>
+        <div class="slide" id="slide4"><img src="4.png" /></div>
+      </div>
+      <div id="download-qr">
+        <div>扫描二维码下载</div>
+        <img class="qrclass" src="qrcode.png">
+        
+        <a href="itms-services://?action=download-manifest&url=http://mojun.github.io/app/ios/BTCStats.plist">
+          <img src="download-inhouse.png">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="copyright">Copyright ©2012 KimoWorks. All rights reserved.<a href="mailto:support@kimoworks.com">Support</a></div>
+</body>
+
+</html>
