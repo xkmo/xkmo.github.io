@@ -160,5 +160,10 @@ h2{
 .international{
 	display: block;
 	float: right;
+}
 
+#download a img{
+	display: block;
+width: 180px;
+height: 60px;
 }
